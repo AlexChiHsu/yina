@@ -11,13 +11,13 @@ export default function Landing() {
   const [selected, setSelected] = useState("");
   return (
     <LandingContainer path={path}>
-      <LandingTitle>以娜的個人小檔案</LandingTitle>
+      <LandingTitle>顏以娜 Amy</LandingTitle>
       <ButtonContainer>
         <LandingButton
-          onMouseEnter={() => setSelected("業配")}
+          onMouseEnter={() => setSelected("collection")}
           onMouseOut={() => setSelected("")}
         >
-          {selected === "業配" ? "Clik me" : "業配"}
+          {selected === "collection" ? "Clik me" : "Collection"}
         </LandingButton>
         <LandingButton
           onMouseEnter={() => setSelected("主持")}

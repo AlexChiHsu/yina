@@ -11,7 +11,8 @@ export const LandingContainer = styled.div<{ path?: string }>`
     flex
     flex-col
     items-center
-    pt-[3em]
+    pt-[10%]
+    overflow-hidden
   `}
   ${({ path }) =>
     css`
@@ -22,6 +23,10 @@ export const LandingContainer = styled.div<{ path?: string }>`
         ),
         url(${path});
     `}
+  @media (max-width: 720px) {
+    background-position: left 25% bottom 0%;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -31,8 +36,8 @@ export const LandingContainer = styled.div<{ path?: string }>`
 
 export const LandingTitle = styled.h1`
   ${tw`
-    text-8xl
     font-medium
+    text-[450%]
   `}
   animation-name: fade;
   animation-duration: 1s;
@@ -50,10 +55,9 @@ export const LandingTitle = styled.h1`
 export const ButtonContainer = styled.div`
   ${tw`
     w-full
-    pl-[25em]
-    pr-[25em]
-    mt-[1em]
-    mb-[12em]
+    pl-[3%]
+    pr-[3%]
+    mt-[5%]
     flex
     justify-between
     items-center
@@ -62,8 +66,8 @@ export const ButtonContainer = styled.div`
 
 export const LandingButton = styled.button`
   ${tw`
-    min-w-[5em]
-    text-[3em]
+    min-w-[10%]
+    text-[200%]
   `}
   animation-name: fade;
   animation-duration: 1.5s;
