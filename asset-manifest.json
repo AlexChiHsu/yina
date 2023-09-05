@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/yina/static/css/main.41411841.css",
+    "main.js": "/yina/static/js/main.4bf45c57.js",
+    "static/js/787.84a64100.chunk.js": "/yina/static/js/787.84a64100.chunk.js",
+    "static/media/yina.jpg": "/yina/static/media/yina.e95ea7c5c39b577df598.jpg",
+    "index.html": "/yina/index.html",
+    "main.41411841.css.map": "/yina/static/css/main.41411841.css.map",
+    "main.4bf45c57.js.map": "/yina/static/js/main.4bf45c57.js.map",
+    "787.84a64100.chunk.js.map": "/yina/static/js/787.84a64100.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41411841.css",
+    "static/js/main.4bf45c57.js"
+  ]
+}
