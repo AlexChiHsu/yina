@@ -9,7 +9,9 @@ export const LandingContainer = styled.div<{ path?: string }>`
     bg-bottom
     bg-no-repeat
     flex
-    justify-center
+    flex-col
+    items-center
+    pt-[3em]
   `}
   ${({ path }) =>
     css`
@@ -25,4 +27,67 @@ export const LandingContainer = styled.div<{ path?: string }>`
   }
   -ms-overflow-style: none;
   overflow: auto;
+`;
+
+export const LandingTitle = styled.h1`
+  ${tw`
+    text-8xl
+    font-medium
+  `}
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  ${tw`
+    w-full
+    pl-[25em]
+    pr-[25em]
+    mt-[1em]
+    mb-[12em]
+    flex
+    justify-between
+    items-center
+  `}
+`;
+
+export const LandingButton = styled.button`
+  ${tw`
+    min-w-[5em]
+    text-[3em]
+  `}
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    animation-name: hover;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    @keyframes hover {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
 `;
