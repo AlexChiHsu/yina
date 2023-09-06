@@ -11,7 +11,6 @@ import { useParams } from "react-router-dom";
 export default function Landing() {
   const [selected, setSelected] = useState("");
   const param = useParams();
-  console.log(JSON.stringify(param));
   return (
     <LandingContainer path={path}>
       <LandingTitle>顏以娜 Amy</LandingTitle>
