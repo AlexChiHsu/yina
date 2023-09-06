@@ -59,7 +59,7 @@ export const ButtonContainer = styled.div`
     pr-[3%]
     mt-[5%]
     flex
-    justify-between
+    justify-center
     items-center
   `}
 `;

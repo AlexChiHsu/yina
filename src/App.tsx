@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
-import Landing from "./screens/landing";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const AppContainer = styled.div`
   ${tw`
@@ -13,7 +13,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Landing />
+      <Outlet />
     </AppContainer>
   );
 }

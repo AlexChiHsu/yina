@@ -7,9 +7,10 @@ export const router = createHashRouter(
     {
       path: "/",
       element: <App />,
+      errorElement: <></>,
       children: [
         {
-          path: "/",
+          path: "/landing/:type",
           element: <Landing />,
         },
       ],
