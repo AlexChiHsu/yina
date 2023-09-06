@@ -18,3 +18,6 @@ function App() {
 }
 
 export default App;
+
+// Instagram 應用程式編號 812850980586595
+// Instagram 應用程式密鑰 151e2e8418633ab4dd07dbef996013d1
