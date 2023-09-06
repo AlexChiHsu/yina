@@ -31,7 +31,7 @@ export default function Landing() {
             {selected === "主持" ? "Clik me" : "主持"}
           </LandingButton>
         )}
-        {param.type === "actor" && (
+        {param.type === "actress" && (
           <LandingButton
             onMouseEnter={() => setSelected("演員")}
             onMouseOut={() => setSelected("")}
