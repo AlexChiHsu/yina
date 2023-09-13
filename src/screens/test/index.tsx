@@ -10,21 +10,36 @@ const TestContainer = styled.div`
   `}
 `;
 
+const IframeContainer = styled.div`
+  ${tw`
+    w-[10%]
+    // h-0
+    // overflow-hidden
+    // h-[56.25%]
+    bg-amber-200
+    relative
+    // pb-[56.25%]
+  `}/* padding-bottom: 56.25%; */
+`;
+
 export default function Test() {
   return (
     <TestContainer>
-      <Iframe
-        url="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&width=500&show_text=true&height=373&appId"
-        width="500px"
-        height="373px"
-        id=""
-        className=""
-        overflow="auto"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        // display="block"
-        // position="relative"
-      />
+      <IframeContainer>
+        <Iframe
+          // url="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F1207148619771662%2F&show_text=true&width=560&t=0"
+          url="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F163671912285037%2F&show_text=true&width=380&t=0"
+          // url="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F432938068276457%2F&show_text=true&width=476&t=0"
+          width="100%"
+          height="100%"
+          id=""
+          className=""
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;"
+          allowFullScreen
+          sandbox="allow-modals"
+          // position="relative"
+        />
+      </IframeContainer>
     </TestContainer>
   );
 }
