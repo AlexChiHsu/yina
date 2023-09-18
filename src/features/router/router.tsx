@@ -8,7 +8,11 @@ export const router = createHashRouter(
     {
       path: "/",
       element: <App />,
-      errorElement: <><div>error</div></>,
+      errorElement: (
+        <>
+          <div>error</div>
+        </>
+      ),
       children: [
         {
           path: "/landing/:type",
