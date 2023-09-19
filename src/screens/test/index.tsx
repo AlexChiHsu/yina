@@ -2,6 +2,7 @@ import React from "react";
 import Iframe from "react-iframe";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { FacebookEmbed } from "react-social-media-embed";
 
 const TestContainer = styled.div`
   ${tw`
@@ -29,33 +30,15 @@ const IframeContainer = styled.div`
   `}
 `;
 
+// https://www.facebook.com/yinaamy/posts/4994828300530816?ref=embed_video
+// https://www.facebook.com/yinaamy/posts/5048234488523530?ref=embed_video
 export default function Test() {
   return (
     <TestContainer>
       <IframeContainer>
-        <Iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F163671912285037%2F&show_text=true&t=0"
-          url="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F163671912285037%2F&show_text=true&t=0"
-          id=""
-          className=""
-        />
-      </IframeContainer>
-      <IframeContainer>
-        <Iframe
-          url="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F1207148619771662%2F&show_text=true&width=560&t=0"
-          src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F1207148619771662%2F&show_text=true&width=560&t=0"
-          id=""
-          className=""
-          // styles={{ background: "white" }}
-        />
-      </IframeContainer>
-      <IframeContainer>
-        <Iframe
-          url="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F432938068276457%2F&show_text=true&width=476&t=0"
-          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fyinaamy%2Fvideos%2F432938068276457%2F&show_text=true&width=476&t=0"
-          id=""
-          className=""
-          // styles={{ background: "white" }}
+        <FacebookEmbed
+          url="https://www.facebook.com/yinaamy/posts/4331561550190831?ref=embed_video"
+          width={350}
         />
       </IframeContainer>
     </TestContainer>
