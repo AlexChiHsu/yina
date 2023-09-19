@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { fetchSheet } from "./api/get";
+import { useAppDispatch, useAppSelector } from "./app/hooks";
 
 const AppContainer = styled.div`
   ${tw`
@@ -10,6 +13,13 @@ const AppContainer = styled.div`
 `;
 
 function App() {
+  const dispatch = useAppDispatch();
+  const sheet = useAppSelector((state) => state.sheetReducer.sheet);
+  useEffect(() => {
+    dispatch(fetchSheet());
+  }, [dispatch]);
+
+  console.log(JSON.stringify(sheet));
   return (
     <AppContainer>
       <Outlet />

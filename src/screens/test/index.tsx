@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Iframe from "react-iframe";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { FacebookEmbed } from "react-social-media-embed";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { fetchSheet } from "../../api/get";
 
 const TestContainer = styled.div`
   ${tw`
@@ -33,6 +35,13 @@ const IframeContainer = styled.div`
 // https://www.facebook.com/yinaamy/posts/4994828300530816?ref=embed_video
 // https://www.facebook.com/yinaamy/posts/5048234488523530?ref=embed_video
 export default function Test() {
+  const dispatch = useAppDispatch();
+  const sheet = useAppSelector((state) => state.sheetReducer.sheet);
+  useEffect(() => {
+    dispatch(fetchSheet());
+  }, [dispatch]);
+
+  console.log(JSON.stringify(sheet));
   return (
     <TestContainer>
       <IframeContainer>
