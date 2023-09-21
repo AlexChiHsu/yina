@@ -19,7 +19,6 @@ function App() {
     dispatch(fetchSheet());
   }, [dispatch]);
 
-  console.log(JSON.stringify(sheet));
   return (
     <AppContainer>
       <Outlet />
