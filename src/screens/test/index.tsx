@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import Iframe from "react-iframe";
-import styled, { css } from "styled-components";
+import { useRef } from "react";
+import styled from "styled-components";
 import tw from "twin.macro";
 import { FacebookEmbed } from "react-social-media-embed";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { fetchSheet } from "../../api/get";
-import { Masonry } from "@mui/lab";
+import { useMediaQuery } from "@mui/material";
+import Masonry from "@mui/lab/Masonry";
 
 const TestContainer = styled.div`
   ${tw`
@@ -15,12 +13,6 @@ const TestContainer = styled.div`
   `}
 `;
 export default function Test() {
-  const dispatch = useAppDispatch();
-  const sheet = useAppSelector((state) => state.sheetReducer.sheet);
-  useEffect(() => {
-    dispatch(fetchSheet());
-  }, [dispatch]);
-
   const url = [
     {
       id: 0,
@@ -40,12 +32,19 @@ export default function Test() {
       link: "https://www.facebook.com/yinaamy/posts/4331561550190831?ref=embed_video",
     },
   ];
+  const viewRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useMediaQuery("(max-width: 720px)");
   // console.log(JSON.stringify(sheet));
   return (
-    <TestContainer>
-      <Masonry spacing={4}>
+    <TestContainer ref={viewRef}>
+      {isMobile}
+      <Masonry columns={isMobile ? 1 : 3} spacing={4} sx={{ flexWrap: "wrap" }}>
         {url.map((item) => (
-          <FacebookEmbed url={item.link} width={350} />
+          <FacebookEmbed
+            url={item.link}
+            width={isMobile ? "100%" : 325}
+            debug={true}
+          />
         ))}
       </Masonry>
     </TestContainer>

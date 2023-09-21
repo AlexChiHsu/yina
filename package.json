@@ -19,7 +19,6 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "gh-pages": "^6.0.0",
-    "json-server": "^0.17.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -36,13 +35,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=4003 react-scripts start npx json-server --watch db.json --port 3000",
+    "start": "PORT=4003 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "server": "npx json-server --watch db.json --port 3000"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
