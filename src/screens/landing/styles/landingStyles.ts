@@ -11,15 +11,15 @@ export const LandingContainer = styled.div<{ path?: string }>`
     flex
     flex-col
     items-center
-    pt-[10%]
+    // pt-[10%]
     overflow-hidden
   `}
   ${({ path }) =>
     css`
       background-image: linear-gradient(
           360deg,
-          #1b1e2580 0%,
-          rgba(27, 30, 37, 0.3) 70.22%
+          #ffffff80 0%,
+          rgba(255, 255, 255, 0.8) 70.22%
         ),
         url(${path});
     `}
@@ -38,6 +38,7 @@ export const LandingTitle = styled.h1`
   ${tw`
     font-medium
     text-[450%]
+    text-black
   `}
   animation-name: fade;
   animation-duration: 1s;

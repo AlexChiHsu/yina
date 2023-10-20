@@ -13,7 +13,7 @@ export default function Landing() {
   const param = useParams();
   return (
     <LandingContainer path={path}>
-      <LandingTitle>顏以娜 Amy</LandingTitle>
+      {/* <LandingTitle>Test</LandingTitle>
       <ButtonContainer>
         {param.type === "advertorial" && (
           <LandingButton
@@ -39,7 +39,7 @@ export default function Landing() {
             {selected === "演員" ? "Clik me" : "演員"}
           </LandingButton>
         )}
-      </ButtonContainer>
+      </ButtonContainer> */}
     </LandingContainer>
   );
 }
