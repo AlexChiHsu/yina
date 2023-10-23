@@ -29,8 +29,9 @@ export const ResumeContentContainer = styled.div`
 
 export const ResumeContentTextContainer = styled.div`
   ${tw`
-    w-1/3
-    h-1/6
+    inline-block
+    w-auto
+    h-auto
     bg-gray-600
     text-red-400
   `}
