@@ -14,7 +14,11 @@ export default function Landing() {
   const param = useParams();
   return (
     <LandingContainer path={path}>
-      <Resume />
+      <Resume
+        introduction="我是誰 是誰 你是誰 你我他
+      説你好
+      丁丁"
+      />
       {/* <LandingTitle>Test</LandingTitle>
       <ButtonContainer>
         {param.type === "advertorial" && (
