@@ -17,11 +17,11 @@ export const LandingContainer = styled.div<{ path?: string }>`
   ${({ path }) =>
     css`
       background-image: linear-gradient(
-          360deg,
-          #ffffff80 0%,
-          rgba(255, 255, 255, 0.8) 70.22%
-        ),
-        url(${path});
+        360deg,
+        #ffffff80 0%,
+        rgba(255, 255, 255, 0.8) 70.22%
+      );
+      /* url(${path}); */
     `}
   @media (max-width: 720px) {
     background-position: left 25% bottom 0%;

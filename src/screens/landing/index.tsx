@@ -7,12 +7,14 @@ import {
 } from "./styles/landingStyles";
 import path from "../../asset/images/yina.jpg";
 import { useParams } from "react-router-dom";
+import Resume from "../../components/resume";
 
 export default function Landing() {
   const [selected, setSelected] = useState("");
   const param = useParams();
   return (
     <LandingContainer path={path}>
+      <Resume />
       {/* <LandingTitle>Test</LandingTitle>
       <ButtonContainer>
         {param.type === "advertorial" && (
