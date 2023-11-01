@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://alexchihsu.github.io/yina",
   "dependencies": {
+    "@apollo/client": "^3.8.6",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@material-tailwind/react": "^2.1.1",
@@ -36,7 +37,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=4003 react-scripts start",
+    "start": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
